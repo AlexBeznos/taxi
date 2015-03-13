@@ -1,0 +1,9 @@
+.row
+  .col-lg-6.col-lg-offset-3
+    %h1 Почему вы решили не заказывать?
+    =form_for @order, html: {role: "form"} do |f|
+      .form-inline
+        =f.select :circumstances, @selects
+
+      .form-group
+        =f.submit 'Подсчитать стоимость', class: 'btn btn-success'

@@ -6,4 +6,4 @@
       .list-group-item.list-group-item-default Приблезительная продолжительность поездки #{@info[:duration].to_i} минут
     .btn-group.btn-group-lg.center-block{:style => 'width: 285px;'}
       %a{:href => "call/#{@order.id}", :class => 'btn btn-success'} Заказать
-      %a{:href => "#", :class => 'btn btn-warning'} Отказатся
+      %a{:href => "decline/#{@order.id}", :class => 'btn btn-warning'} Отказатся

@@ -18,10 +18,19 @@ class StaticController < ApplicationController
 
   def decline
     @order = Order.find(params[:id])
+    @selects = Order.circumstances.keys.to_a
+    @selects.shift()
+  end
+
+  def decline_answer
+    @order = Order.find(params[:id])
+    @order.declined!
+    @order.update(order_params)
+    redirect_to root_path
   end
 
   private
   def order_params
-    params.require(:order).permit(:from_street, :from_house, :to_street, :to_house, :cost, :distance)
+    params.require(:order).permit(:from_street, :from_house, :to_street, :to_house, :cost, :distance, :circumstances)
   end
 end

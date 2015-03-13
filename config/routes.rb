@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'static/index'
   post 'calculate' => 'static#calculate', as: :orders
   get 'call/:id' => 'static#call'
+  get 'decline/:id' => 'static#decline'
+  patch 'decline_answer/:id' => 'static#decline_answer', as: :order
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

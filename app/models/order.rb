@@ -2,7 +2,7 @@ class Order < ActiveRecord::Base
   include AASM
 
   enum status: [:in_process, :sended, :declined]
-  enum circumstances: [:not_set, :service, :price, :time]
+  enum circumstances: [:not_set, :'Не удобный сервис', :'Не устроила цена', :'Не устроило время']
 
   aasm column: :status, whiny_transitions: false, no_direct_assignment: true do
     state :in_process, :initial => true
