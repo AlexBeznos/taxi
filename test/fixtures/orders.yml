@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  from_street: MyString
+  from_house: MyString
+  to_street: MyString
+  to_house: MyString
+  distance: MyString
+  cost: 1.5
+  sended: false
+
+two:
+  from_street: MyString
+  from_house: MyString
+  to_street: MyString
+  to_house: MyString
+  distance: MyString
+  cost: 1.5
+  sended: false

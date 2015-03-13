@@ -1,2 +1,9 @@
-%h1 Static#calculate
-%p Find me in app/views/static/calculate.html.haml
+.row
+  .col-md-6.col-md-offset-3
+    .list-group{:style => 'margin-top: 10px;'}
+      .list-group-item.list-group-item-default Приблезительная цена #{@info[:cost]} грн
+      .list-group-item.list-group-item-default Растояние между точками #{@info[:distance].to_f} км
+      .list-group-item.list-group-item-default Приблезительная продолжительность поездки #{@info[:duration].to_i} минут
+    .btn-group.btn-group-lg.center-block{:style => 'width: 285px;'}
+      %a{:href => "#", :class => 'btn btn-success'} Заказать
+      %a{:href => "#", :class => 'btn btn-warning'} Отказатся

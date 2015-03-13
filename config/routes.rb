@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'static#index'
   get 'static/index'
-  get 'static/calculate'
+  post 'calculate' => 'static#calculate', as: :orders
   get 'static/call'
 
   # The priority is based upon order of creation: first created -> highest priority.

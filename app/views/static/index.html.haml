@@ -1,3 +1,17 @@
 .row
-  .col-md-6.col-md-offset-3
-    %h1 boo
+  .col-lg-6.col-lg-offset-3
+    %h1 Заказ такси
+    =form_for @order, html: {role: "form"} do |f|
+      %p.help-block От куда..
+      .form-inline
+        =f.text_field :from_street, {class: 'form-control', value: 'Красноармейская'}
+        =f.text_field :from_house, {class: 'form-control', value: '48'}
+
+      %p.help-block Куда..
+      .form-inline{:style => 'margin: 10px 0;'}
+        =f.text_field :to_street, {class: 'form-control', placeholder: 'Улица..'}
+        =f.text_field :to_house, {class: 'form-control', placeholder: 'Дом..'}
+
+
+      .form-group
+        =f.submit 'Подсчитать стоимость', class: 'btn btn-success'

@@ -1,0 +1,16 @@
+.row
+  .col-md-6.col-md-offset-3
+    %h1 Заказ такси
+    =form_for @order, html: {role: "form"} do |f|
+      .form-group
+        =f.label :name, 'Name'
+        =f.text_field :name, class: 'form-control'
+
+      .form-group
+        =f.label :address, 'Address'
+        =f.text_field :address, class: 'form-control'
+
+
+      .form-group
+        =f.submit 'Save', class: 'btn btn-info'
+        =link_to 'Cancel', cinemas_path, class: 'btn btn-default'
