@@ -9,6 +9,8 @@ class CreateOrders < ActiveRecord::Migration
       t.float :cost
       t.integer :status
       t.integer :circumstances, :default => 0
+      t.string :phone
+      t.boolean :deleted, :default => false
 
       t.timestamps
     end

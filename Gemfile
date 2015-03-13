@@ -34,6 +34,9 @@ gem 'delayed_job_active_record'
 # configuration
 gem 'figaro'
 
+# phone validator
+gem 'phony_rails'
+
 # dump db
 gem 'yaml_db'
 

@@ -1,5 +1,6 @@
 .row
   .col-lg-6.col-lg-offset-3
+    = render 'shared/alert'
     %h1 Заказ такси
     =form_for @order, html: {role: "form"} do |f|
       %p.help-block От куда..
@@ -11,6 +12,10 @@
       .form-inline{:style => 'margin: 10px 0;'}
         =f.text_field :to_street, {class: 'form-control', placeholder: 'Улица..'}
         =f.text_field :to_house, {class: 'form-control', placeholder: 'Дом..'}
+
+      %p.help-block Ваш номер телефона...
+      .form-inline{:style => 'margin: 10px 0;'}
+        =f.text_field :phone, {class: 'form-control', style: 'width: 96%;'}
 
 
       .form-group

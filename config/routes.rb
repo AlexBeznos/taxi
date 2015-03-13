@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  namespace :admin do
+    delete 'orders/:id' => 'dashboard#destroy_order', as: :destroy_order
+    get 'declined' => 'dashboard#declined'
+    get '/' => 'dashboard#index'
+  end
+
   root to: 'static#index'
   get 'static/index'
   post 'calculate' => 'static#calculate', as: :orders

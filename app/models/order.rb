@@ -1,6 +1,12 @@
 class Order < ActiveRecord::Base
   include AASM
 
+  default_scope -> { where(deleted: false) }
+
+  phony_normalize :phone, :default_country_code => 'UA'
+
+  validates :from_street, :from_house, :to_street, :to_house, :phone, presence: true
+
   enum status: [:in_process, :sended, :declined]
   enum circumstances: [:not_set, :'Не удобный сервис', :'Не устроила цена', :'Не устроило время']
 

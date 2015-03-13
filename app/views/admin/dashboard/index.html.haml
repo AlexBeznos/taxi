@@ -1,0 +1,21 @@
+%h1 Active orders
+%table.table.table-striped.table-bordered
+  %thead
+    %tr
+      %th id
+      %th From
+      %th To
+      %th Phone
+      %th Additionals
+      %th
+
+  %tbody
+    - @orders.each do |order|
+      %tr
+        %td= order.id
+        %td #{order.from_street} #{order.from_house}
+        %td #{order.to_street} #{order.to_house}
+        %td= order.phone
+        %td
+          %button.btn.btn-primary.btn-xs{"data-container" => "body", "data-content" => "Cost #{order.cost} uah Distance #{order.distance} km", "data-placement" => "right", "data-toggle" => "popover", "data-trigger" => "click", :type => "button"} info
+        %td= link_to 'Нах с пляжа!', admin_destroy_order_path(order), :method => 'delete', class: 'btn btn-danger pull-right'

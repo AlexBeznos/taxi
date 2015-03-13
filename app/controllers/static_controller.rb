@@ -9,6 +9,9 @@ class StaticController < ApplicationController
             'distance' => @info[:distance].to_f}
     hash.merge!(order_params)
     @order = Order.create(hash)
+    unless @order.errors.empty?
+      redirect_to root_path, alert: 'Все поля должны быть заполненны..'
+    end
   end
 
   def call
@@ -26,11 +29,11 @@ class StaticController < ApplicationController
     @order = Order.find(params[:id])
     @order.declined!
     @order.update(order_params)
-    redirect_to root_path
+    redirect_to root_path, notice: 'Спасибо за ваш отзыв ;)'
   end
 
   private
   def order_params
-    params.require(:order).permit(:from_street, :from_house, :to_street, :to_house, :cost, :distance, :circumstances)
+    params.require(:order).permit(:from_street, :from_house, :to_street, :to_house, :cost, :distance, :circumstances, :phone)
   end
 end
