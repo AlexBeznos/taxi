@@ -8,10 +8,16 @@ class StaticController < ApplicationController
     hash = {'cost' => @info[:cost],
             'distance' => @info[:distance].to_f}
     hash.merge!(order_params)
-    Order.create(hash)
+    @order = Order.create(hash)
   end
 
   def call
+    @order = Order.find(params[:id])
+    @order.sended!
+  end
+
+  def decline
+    @order = Order.find(params[:id])
   end
 
   private

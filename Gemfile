@@ -28,9 +28,20 @@ gem 'aasm'
 gem 'oj'
 gem 'active_type'
 gem 'google_distance_matrix'
+gem 'daemons'
+gem 'delayed_job_active_record'
+
+# configuration
+gem 'figaro'
 
 # dump db
 gem 'yaml_db'
+
+# vk api
+gem 'vkontakte_api'
+
+# sendgrid
+gem 'sendgrid'
 
 # bootswach
 gem 'twitter-bootswatch-rails'

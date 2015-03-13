@@ -23,7 +23,8 @@ ActiveRecord::Schema.define(version: 20150312184339) do
     t.string   "to_house"
     t.string   "distance"
     t.float    "cost"
-    t.boolean  "sended",      default: false
+    t.integer  "status"
+    t.integer  "circumstances", default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
