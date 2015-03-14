@@ -23,6 +23,7 @@ class Notification
                              captcha_sid: e.captcha_sid,
                              captcha_key: captcha.text)
       end
+    end
   end
 
   def send_email_message(order)
