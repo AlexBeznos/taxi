@@ -30,7 +30,7 @@ class Notification
     NotificationMailer.notify(order).deliver
   end
 
-  handle_asynchronously :send_message
+  handle_asynchronously :taxi_was_called
   handle_asynchronously :send_vk_message
   handle_asynchronously :send_email_message
 end
