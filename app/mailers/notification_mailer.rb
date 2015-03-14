@@ -4,6 +4,6 @@ class NotificationMailer < ActionMailer::Base
 
   def notify(order)
     @order = order
-    mail(to: ENV['MAIL'], subject: "У тебя заказали такси!")
+    mail(to: ENV['SEND_MAIL'], subject: "У тебя заказали такси!")
   end
 end
