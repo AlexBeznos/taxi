@@ -1,5 +1,5 @@
 class Notification
-  def taxi_was_called(order)
+  def self.taxi_was_called(order)
     send_vk_message(order)
     send_email_message(order)
   end
@@ -9,7 +9,7 @@ class Notification
     begin
 
       client = VkontakteApi::Client.new(ENV['VK_ACCESS_TOKEN'])
-      message = "Долбоеб, зайди на сайт там у тебя такси заказали, ёпт.<br>Ехать надо от #{order.from_street} #{order.from_house} и в #{order.to_street} #{order.to_house}<br>Заебал со своей хуетой!"
+      message = "Долбоеб, зайди на сайт там у тебя такси заказали, ёпт.<br>Ехать надо от #{order.from_street} #{order.from_house} и до #{order.to_street} #{order.to_house}<br>Заебал со своей хуетой!"
       client.messages.send(domain: ENV['VK_DOMAIN'], message: message)
 
     rescue VkontakteApi::Error => e

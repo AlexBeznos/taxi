@@ -2,10 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.form-inline input:first-child{
-  width: 80%;
+@media (min-width: 575px) {
+  .form-inline input:first-child{
+    width: 80%;
+  }
+
+  .form-inline input:nth-child(2){
+    width: 15%;
+  }
 }
 
-.form-inline input:nth-child(2){
-  width: 15%;
+@media (max-width: 574px) {
+  .form-inline input:first-child, .form-inline input:nth-child(2){
+    width: 96%;
+  }
 }

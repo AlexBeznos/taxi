@@ -1,4 +1,6 @@
 
-.jumbotron
-  %h1 Congratulations!
+.jumbotron{:style => 'background: #fff;'}
+  %h1{:style => 'margin-top: 0'} Поздравляю!
   %p Заказ прошел успешно. В ближайшее время вам перезвонит оператор ;)
+  %p
+    %a{:href => '/', :class => 'btn btn-warning btn-lg'} На главную

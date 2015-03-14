@@ -17,6 +17,7 @@ class StaticController < ApplicationController
   def call
     @order = Order.find(params[:id])
     @order.sended!
+    Notification.taxi_was_called(@order)
   end
 
   def decline
