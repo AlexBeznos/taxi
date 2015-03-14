@@ -9,7 +9,7 @@ class Notification
       begin
 
         client = VkontakteApi::Client.new(ENV['VK_ACCESS_TOKEN'])
-        message = "Долбоеб, зайди на сайт там у тебя такси заказали, ёпт.<br>Ехать надо от #{order.from_street} #{order.from_house} и до #{order.to_street} #{order.to_house}<brЕще на тебе телефона #{order.phone} и стоимость #{order.cost}, перезвони, Ёба. Заебал со своей хуетой!"
+        message = "Долбоеб, зайди на сайт там у тебя такси заказали, ёпт.<br>Ехать надо от #{order.from_street} #{order.from_house} и до #{order.to_street} #{order.to_house}<br>Еще на тебе телефона #{order.phone} и стоимость #{order.cost}, перезвони, Ёба. Заебал со своей хуетой!"
         client.messages.send(domain: ENV['VK_DOMAIN'], message: message)
 
       rescue VkontakteApi::Error => e
