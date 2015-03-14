@@ -1,3 +1,9 @@
+GIT
+  remote: git@github.com:infosimples/deathbycaptcha.git
+  revision: 7a81bafd4aa0534a5f388fff7038d5cfa1b2d10a
+  specs:
+    deathbycaptcha (5.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -205,6 +211,7 @@ DEPENDENCIES
   active_type
   coffee-rails (~> 4.0.0)
   daemons
+  deathbycaptcha (~> 5.0.0)!
   delayed_job_active_record
   figaro
   google_distance_matrix
