@@ -3,7 +3,7 @@
     = render 'shared/alert'
     %h1 Заказать такси
     =form_for @order, html: {role: "form"} do |f|
-      %p.help-block От куда..
+      %p.help-block Откуда..
       .form-inline
         =f.text_field :from_street, {class: 'form-control', value: 'Красноармейская'}
         =f.text_field :from_house, {class: 'form-control', value: '48'}
@@ -19,4 +19,4 @@
 
 
       .form-group
-        =f.submit 'Подсчитать стоимость', class: 'btn btn-success'
+        =f.submit 'Просчитать стоимость', class: 'btn btn-success'
