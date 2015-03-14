@@ -51,7 +51,7 @@ gem 'twitter-bootswatch-rails'
 gem 'twitter-bootswatch-rails-helpers'
 
 # Capcha solver
-gem 'deathbycaptcha', '~> 5.0.0', :git => 'git@github.com:infosimples/deathbycaptcha.git'
+gem 'deathbycaptcha'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
