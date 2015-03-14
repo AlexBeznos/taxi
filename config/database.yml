@@ -83,5 +83,3 @@ test:
 production:
   <<: *default
   database: taxi_production
-  username: taxi
-  password: <%= ENV['TAXI_DATABASE_PASSWORD'] %>
