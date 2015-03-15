@@ -4,6 +4,6 @@
       .list-group-item.list-group-item-default Приблизительная цена #{@info[:cost]} грн
       .list-group-item.list-group-item-default Расстояние между точками #{@info[:distance].to_f} км
       .list-group-item.list-group-item-default Приблизительная продолжительность поездки #{@info[:duration].to_i} минут
-    .btn-group.center-block{:style => 'width: 205px;'}
+    .btn-group.center-block{:style => 'width: 206px;'}
       %a{:href => "call/#{@order.id}", :class => 'btn btn-success'} Заказать
       %a{:href => "decline/#{@order.id}", :class => 'btn btn-warning'} Отказаться

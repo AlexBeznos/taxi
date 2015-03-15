@@ -16,7 +16,7 @@ class Geo
 
     hash = {:distance => info.distance_text,
             :duration => info.duration_text,
-            :cost => info.distance_text.to_f < 4 ? 30 : ((info.distance_text.to_f - 4) * 2.8) + 30}
+            :cost => info.distance_text.to_f < 4 ? 30 : ((info.distance_text.to_f - 4) * 4) + 30}
 
     hash
   end
